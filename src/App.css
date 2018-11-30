@@ -80,6 +80,14 @@
   position: relative;
 }
 
+.nav-home a:hover {
+  background: transparent
+}
+
+.banner {
+  margin-top: -57px;
+}
+
 .nav-home img {
   padding-top: 51px;
   margin-left: -15px;
@@ -124,10 +132,53 @@
   text-align: center !important;
 }
 
-
-
 .symbols div {
   width: 22%;
+}
+
+.involvement {
+  display: flex;
+  position: relative;
+  left: 50px;
+  margin-left: 50px;
+}
+
+.involvement h2 {
+  padding-left: 0 !important;
+  text-align: center !important;
+}
+
+.involvement p {
+  width: 90%;
+  margin-left: 5% !important;
+  text-align: center !important;
+}
+
+.involvement div {
+  width: 32%;
+  margin-right: 2%;
+  text-align: center;
+  background-color: rgb(255, 247, 225);
+  border: 7px solid rgb(245, 229, 176);
+  -webkit-box-shadow: 0px 0px 55px -14px rgba(115,115,115,0.69);
+  -moz-box-shadow: 0px 0px 55px -14px rgba(115,115,115,0.69);
+  box-shadow: 0px 0px 55px -14px rgba(115,115,115,0.69);
+}
+
+.SAVE {
+  margin-left: 100px;
+  border: 5px solid rgb(245, 229, 176);
+  float: left;
+  -webkit-box-shadow: 0px 0px 55px -5px rgba(115,115,115,0.69);
+  -moz-box-shadow: 0px 0px 55px -5px rgba(115,115,115,0.69);
+  box-shadow: 0px 0px 55px -5px rgba(115,115,115,0.69);
+  height: auto;
+}
+
+.philanthrophy {
+  height: auto;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .upper-item img {
@@ -170,6 +221,116 @@
   margin: 0 auto;
 }
 
+.Join p {
+  width: 60%;
+  margin-bottom: -25px;
+  text-align: center !important;
+  padding-left: 50px;
+}
+
+.join-p{
+  width: 100%;
+  text-align: center;
+  margin-left: 50px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.Join {
+  height: 100%;
+  margin-top: 50px;
+  padding-bottom: 600px;
+  margin-bottom: 50px;
+}
+
+.Contact {
+  margin-bottom: 20px;
+}
+
+.Contact h1 {
+  margin-bottom: 30px;
+}
+
+.links img {
+  padding: 10px;
+  margin-top: -50px;
+}
+
+.name-form {
+  margin-top:0;
+}
+
+.btn-primary {
+  border-radius: 0 !important;
+  border: 0 !important;
+  background: linear-gradient(#C42032, rgb(117, 7, 20)) !important;
+  font-family: "OpenSans", sans-serif;
+  font-size: 10px !important;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 50px !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(rgb(117, 7, 20), #C42032) !important;
+}
+
+.form-img {
+  margin-bottom: 100px !important;
+}
+
+.form-img img {
+  margin-top: 65px;
+  float: right;
+  width: 50%;
+  margin-left: -125px;
+  position: absolute;
+  -webkit-box-shadow: 0px 0px 55px -5px rgba(115,115,115,0.69);
+  -moz-box-shadow: 0px 0px 55px -5px rgba(115,115,115,0.69);
+  box-shadow: 0px 0px 55px -5px rgba(115,115,115,0.69);
+}
+
+.comment-box textarea {
+  height: auto;
+  margin-left: 22.4px;
+  overflow-wrap: break-word;
+  border-radius: 0;
+  border: solid 1px #575656 !important;
+  width: 400px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+form {
+  float: left;
+  width: 50%;
+  margin-left: 50px;
+}
+.form-group label {
+  font-family: "GFS", sans-serif !important;
+  font-size: 30px !important;
+  text-transform: uppercase !important;
+  font-weight: normal !important;
+  letter-spacing: -1px !important;
+  text-align: center !important;
+  color: rgb(87, 86, 86) !important;
+  width: 100% !important;
+}
+
+.form-group input {
+  border: solid 1px #575656 !important;
+  border-radius: 0 !important;
+  width: 400px;
+  margin: auto;
+}
+
+.form-group input[type=name] {
+  display: inline;
+  width: 190px;
+  margin: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 /* Main content */
 
 .content {
@@ -186,7 +347,7 @@
   font-weight: normal;
   letter-spacing: -1px;
   color: #C42032;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 
 .content h2 {
@@ -219,13 +380,31 @@
   margin-left: 100px;
 }
 
-
 .vl {
   border-left: 1px solid rgb(185, 185, 185);
   position: relative;
   text-align: center;
   width: 70%;
   left: 15%;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -175px;
+  visibility: hidden;
+}
+
+.aboutL {
+  text-decoration: none;
+  border: solid blue 1px;
+  padding-top: 250px;
+  margin-top: 250px;
+}
+
+.history {
+  clear: both;
+  overflow: hidden;
 }
 
 .members h1 {
@@ -235,13 +414,147 @@
 
 .members {
   text-align: left;
-  border: 1px solid blue;
 }
 
+.bio {
+  display: inline-block;
+  position: relative;
+  width: 33%;
+}
+
+.bio .two {
+  width: 50%;
+  text-align: center !important;
+  position: relative;
+}
+
+.bio2 {
+  width: 100%;
+  position: relative;
+  margin-left: 140px;
+}
+.executives {
+  width: 100%;
+}
+
+.bio h3 {
+  padding-left: 0;
+  text-align: center;
+  margin-top: -20px;
+  font-size: 22px;
+}
+
+.bio h4{
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: -1px;
+  text-align: center;
+  color: rgb(172, 172, 172);
+  margin-top: -10px;
+}
+
+.bio img {
+  margin-left: 0 !important;
+}
+
+.bio div {
+  text-align: center;
+}
+
+.namelist {
+  width: 100%;
+  position: relative;
+}
+
+
 .members img {
-  border-radius: 50px;
   text-align: left;
   margin-left: 100px;
+}
+
+.rotator {
+  margin-bottom: 50px;
+  padding-bottom: 100px !important;
+  border: solid purple 6px;
+  height: 600px;
+}
+
+.rotator p{
+  font-family: sans-serif !important;
+  color: rgb(87, 86, 86) !important;
+  text-align: center !important;
+}
+
+
+
+.flip-card {
+  margin-left: 50px;
+  width: 200px;
+  height: 260px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  position: relative;
+  display: inline;
+  float: left;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center !important;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-box-shadow: 0px 0px 55px -5px rgba(115,115,115,0.69);
+  -moz-box-shadow: 0px 0px 55px -5px rgba(115,115,115,0.69);
+  box-shadow: 0px 0px 55px -5px rgba(115,115,115,0.69);
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #FFF7E1;
+  border: 5px solid #F5E5B0;
+  color: white;
+  text-align: center !important;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+  text-align: center !important;
+  margin-left: 7.5% !important;
+  width: 85%;
+  font-size: 12px !important;
+}
+
+.flip-card-back h2 {
+  font-size: 20px;
+  
+  text-align: center !important;
+  margin-left: -30px !important;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .card {
@@ -309,6 +622,24 @@
   color: #454444;
 }
 
+.panel-title a{
+  text-decoration: none !important;
+}
+
+.panel-body{
+  background: #ffffff;
+  padding-left: 0 !important;
+}
+
+.panel-body p{
+  margin-left: 20px !important;
+  margin-bottom: -20px;
+}
+
+.panel-body ul{
+  margin-top: 15px;
+}
+
 .panel-group {
   padding-left: 50px;
   width: 75%;
@@ -327,10 +658,15 @@
 
 .panel-heading {
   text-align: left;
+  font-family: sans-serif;
+  color: rgb(87, 86, 86);
 }
 
 .panel-body {
   text-align: left;
+  font-family: sans-serif;
+  color: rgb(87, 86, 86);
+  padding-bottom: -20px;
 }
 
 table {
@@ -455,4 +791,8 @@ table {
 
 .btn-card:hover span.arrow-right-card {
   left: 10px;
+}
+
+.contact {
+  margin-top: 70px;
 }

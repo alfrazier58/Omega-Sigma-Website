@@ -1,6 +1,7 @@
 /* global gapi GoogleAuth */
 import React, { Component } from 'react';
 import './App.css';
+import './gallery.css';
 import './component.css';
 import './font-awesome/css/font-awesome.css';
 import './bootstrap/css/bootstrap.min.css';
@@ -9,7 +10,7 @@ import Login from './LoginConnector';
 
 class App extends Component {
   componentDidUpdate() {
-    $(this.ref.toggleInput.getDOMNode()).bootstrapToggle();
+    //$(this.ref.toggleInput.getDOMNode()).bootstrapToggle();
   }
 
   render() {
@@ -19,7 +20,7 @@ class App extends Component {
           <div className="upper-bar">
               <div className="nav-home">
                   <img src={require('./images/Shine Brighter.png')} width="250px" />
-                  <a href="#">
+                  <a href="#top-link">
                       <h1 className="nav-title">Omega Sigma</h1>
                   </a>
               </div>
@@ -32,87 +33,93 @@ class App extends Component {
               </div>
           </div>
           <div className="lower-bar">
-              <a href="#ABOUT">
+              <a href="#about-link">
                   <p>About</p>
               </a>
-              <a href="HISTORY">
+              <a href="#history-link">
                   <p>History</p>
               </a>
-              <a href="NEWS">
+              <a href="#news-link">
                   <p>News & Events</p>
               </a>
-              <a href="MEMBERS">
+              <a href="#members-link">
                 <p>Members</p>
               </a>
-              <a href="FAQ'S">
+              <a href="#faq-link">
                   <p>FAQ</p>
               </a>
-              <a href="JOIN">
+              <a href="#join-link">
                   <p>Join</p>
               </a>
-              <a href="CONTACT">
+              <a href="#contact-link">
                   <p>Contact</p>
               </a>
 
           </div>
       </div>
+      <a className='anchor' id='top-link'></a>
       <div className="content">
-          <img src={require("./images/group photo.jpg")} width="350px" height="200px"/>
-          <img src={require("./images/hike.jpg")} width="550px" height="450px"/>
-          <img src={require("./images/animal.jpg")} width="350px" height="200px"/>
-          <br />
-          <br />
-          <br />
-          <br />
+          <img className="banner" src={require("./images/banner.png")} width="100%"/>
           <div className="about vl">
+          <a className='anchor' id='about-link'></a>
               <h1>About us</h1>
+    
               <h2>Our Objective</h2>
               <p>Omega Sigma is a service organization at Missouri University of Science and Technology that is dedicated to providing
                   various leadership opportunities and promoting a close unity and friendship among our members through volunteer
                   work.
               </p>
               <h2>Our Values</h2>
-                  <p></p>
-                  <h2>Service</h2>
-                  <p>Service is our highest priority in Omega Sigma. Each member serves the Rolla community by donating time and energy
-                      to local charities and philanthropies. Our members enjoy a variety of service events - from volunteering
-                      at local animal shelters to co-hosting campus blood drives. In addition to traditional service, Omega Sigma
-                      holds a fundraiser every semester to raise money for our philanthropy, the Rolla Animal Shelter. We are helping
-                      not only with their day-to-day expenses, but the Rolla Animal Shelter is having their S.A.V.E. Campaign to
-                      raise money to build a new facility. Omega Sigma is always striving to increase our service on campus and
-                      within the community. Please contact our service chair if you have volunteering opportunities for us! </p>
-                  <div id="myCarousel" className="carousel slide" data-ride="carousel">
-                      <ol className="carousel-indicators">
-                          <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-                          <li data-target="#myCarousel" data-slide-to="1"></li>
-                          <li data-target="#myCarousel" data-slide-to="2"></li>
-                      </ol>
-
-                      <div className="carousel-inner">
-                          <div className="item active">
-                              <img src="la.jpg" alt="Los Angeles" />
-                          </div>
-
-                          <div className="item">
-                              <img src="chicago.jpg" alt="Chicago"/>
-                          </div>
-
-                          <div className="item">
-                              <img src="ny.jpg" alt="New York"/>
-                          </div>
-                      </div>
-
-                      <a className="left carousel-control" href="#myCarousel" data-slide="prev">
-                          <span className="glyphicon glyphicon-chevron-left"></span>
-                          <span className="sr-only">Previous</span>
-                      </a>
-                      <a className="right carousel-control" href="#myCarousel" data-slide="next">
-                          <span className="glyphicon glyphicon-chevron-right"></span>
-                          <span className="sr-only">Next</span>
-                      </a>
+              <div class="cards">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src={require("./images/service.png")} alt="Avatar" width="200px" height="260px" />
+                    </div>
+                    <div class="flip-card-back">
+                    <h2>Service</h2>
+                    <p>Service is our highest priority in Omega Sigma. Each member serves the Rolla community by donating time and energy
+                      to local charities and philanthropies. Our members enjoy a variety of service events, from volunteering
+                      at local animal shelters to co-hosting campus blood drives.</p>
+                    </div>
                   </div>
+                </div>
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src={require("./images/sisterhood.png")} alt="Avatar" width="200px" height="260px" />
+                    </div>
+                    <div class="flip-card-back">
+                    <h2>Sisterhood</h2>
+                    <p>An important part of Omega Sigma is spending time with our sisters. This can be anything from playing as 
+                        a team in intramural sports to just staying in for a movie night as long as we are having fun.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src={require("./images/Social.png")} alt="Avatar" width="200px" height="260px" />
+                    </div>
+                    <div class="flip-card-back">
+                    <h2>Social</h2>
+                    <p>We love to get together with other organizations on campus and have fun! Past social events 
+                        have included bowling with Lambda Chi Alpha and a tie-dye party with Pi Kappa Phi and many more.
+                        We typically try to plan two fun themed socials a month!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                  <div className="philanthrophy">
                   <h2>Our Philanthropy</h2>
+                    <img className="SAVE" src={require("./images/SAVE.jpg")} width="200px" height="200px"/>
+                    
                       <p>The Rolla Animal Shelter</p>
+                      <p>Omega Sigma holds a fundraiser every semester to raise money for our philanthropy, 
+                        the Rolla Animal Shelter. We are helping not only with their day-to-day expenses, but 
+                        the Rolla Animal Shelter is having their S.A.V.E. Campaign to raise money to build a new facility.</p>
+                  </div>
+                  {/*}
                       <h2>Our Symbols</h2>
                       <div className="symbols">
                         <div className="sunsymbol">
@@ -131,10 +138,12 @@ class App extends Component {
                             <img src={require("./images/cornyu.png")} width="130px" height="130px"/>
                             <p>A unicorn</p>
                         </div>
-                      </div>
+    </div>{*/}
           </div>
-          <br />
+
+          
           <div className="history vl">
+          <a className='anchor' id='history-link'></a>
               <h1>ΩΣ History</h1>
               <p>In the fall of 1974, Phi Kappa Theta started a little sister’s organization, which officially became known as Phi
                   Kappa Theta Order of the Sun. In the fall of 1989, it came to pass that the Order of the Sun could no longer
@@ -145,103 +154,131 @@ class App extends Component {
               <h2>ΩΣ Founders</h2>
               <p></p>
           </div>
+
           <div className="news vl">
+            <a className='anchor' id='news-link'></a>
               <h1>News & Events</h1>
-              <div className="main ">
-                  <div id="cbp-qtrotator" className="cbp-qtrotator">
-                      <div className="cbp-qtcontent current">
-                          <img src={require("./images/Login_logo.png")} width="100px" height="100" alt="img01" />
-                          <blockquote>
-                              <p>People eat meat and think they will become as strong as an ox, forgetting that the ox eats grass.</p>
-                              <footer>Pino Caruso</footer>
-                          </blockquote>
+              <article id="cc-slider">
+                <input checked="checked" name="cc-slider" id="slide1" type="radio" />
+                <input name="cc-slider" id="slide2" type="radio"/>
+                <input name="cc-slider" id="slide3" type="radio"/>
+                <input name="cc-slider" id="slide4" type="radio"/>
+                <input name="cc-slider" id="slide5" type="radio"/>
+                <div id="cc-slides">
+                  <div id="overflow">
+                    <div class="inner">
+                      <article>
+                        <div class="cctooltip">
+                          <h3>Amazing / Photoshop / Photography</h3>
+                          <h4>By <a href="#">codeconvey</a></h4>
+                        </div>
+                        <img src={require("./images/slide-1.jpg")}/>
+                      </article>
+                      <article>
+                      <div class="cctooltip">
+                        <h3>Abstract Retro Photography</h3>
+                        <h4>By <a href="#">codeconvey</a></h4>
                       </div>
-                      <div className="cbp-qtcontent">
-                          <img src={require("./images/Login_logo.png")} width="100px" height="100" alt="img02" />
-                          <blockquote>
-                              <p>Nothing will benefit human health and increase the chances for survival of life on Earth as much
-                                  as the evolution to a vegetarian diet.</p>
-                              <footer>Albert Einstein</footer>
-                          </blockquote>
+                      <img src={require("./images/slide-2.jpg")}/> 
+                      </article>
+                    <article>
+                      <div class="cctooltip">
+                        <h3>Street Photography</h3>
+                        <h4>By <a href="#">codeconvey</a></h4>
                       </div>
-                      <div className="cbp-qtcontent">
-                          <img src={require("./images/Login_logo.png")} width="100px" height="100" alt="img03" />
-                          <blockquote>
-                              <p>If you don't want to be beaten, imprisoned, mutilated, killed or tortured then you shouldn't condone
-                                  such behaviour towards anyone, be they human or not.</p>
-                              <footer>Moby</footer>
-                          </blockquote>
+                      <img src={require("./images/slide-3.jpg")}/> 
+                    </article>
+                    <article>
+                      <div class="cctooltip">
+                        <h3>Portrait / Woman / Photography</h3>
+                        <h4>By <a href="#">codeconvey</a></h4>
                       </div>
-                      <div className="cbp-qtcontent">
-                          <img src={require("./images/Login_logo.png")} width="100px" height="100" alt="img04" />
-                          <blockquote>
-                              <p>My body will not be a tomb for other creatures.</p>
-                              <footer>Leonardo Da Vinci</footer>
-                          </blockquote>
+                      <img src={require("./images/slide-4.jpg")}/>
+                    </article>
+                    <article>
+                      <div class="cctooltip">
+                        <h3>Fashion / Sport / Photography</h3>
+                        <h4>By <a href="#">codeconvey</a></h4>
                       </div>
-                      <span className="cbp-qtprogress"></span>
+                      <img src={require("./images/slide-5.jpg")}/>
+                    </article>
                   </div>
+                </div>
               </div>
-              <br/>
+              <div id="controls">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+                <label for="slide5"></label>
+              </div>
+            </article>
           </div>
+
+
           <div className="members vl">
-              <h1>Members</h1>
-              <div className="container-card">
-                  <div className="content-card">
-                      <a href="#" className="btn-card left-card">
-                          <span className="left-card icon-card">
-                              <span className="arrow-left-card"></span>
-                          </span>
-                          <span className="right-card title-card">Executives</span>
-                      </a>
-
-                      <a href="#" className="btn-card right-card">
-                          <span className="left-card title-card">New</span>
-                          <span className="right-card icon-card">
-                              <span className="arrow-right-card"></span>
-                          </span>
-                      </a>
-                  </div>
-                  <div className="content-card">
-                      <a href="#" className="btn-card left-card">
-                          <span className="left-card icon-card">
-                              <span className="arrow-left-card"></span>
-                          </span>
-                          <span className="right-card title-card">Active</span>
-                      </a>
-
-                      <a href="#" className="btn-card right-card">
-                          <span className="left-card title-card">Alumni</span>
-                          <span className="right-card icon-card">
-                              <span className="arrow-right-card"></span>
-                          </span>
-                      </a>
-                  </div>
+            <a className='anchor' id='members-link'></a>
+            <h1>Members</h1>
+            <div classname="executives">
+              <div className="bio">
+              <div>
+                  <img src={require("./images/becca.png")} width="150px" height="150px"/>
+                </div>
+                <h3>Becca Campbell</h3>
+                <h4>President</h4>
               </div>
-
-
-              <h3>President</h3>
-              <h3>Vice President</h3>
-              <h3>Tresurer</h3>
-              <img src={require("./images/jessie.JPG")} width="100px" height="100px"/>
-              <h3>Service</h3>
-              <img src={require("./images/sara.jpg")} width="100px" height="100px"/>
-              <h3>Secretary</h3>
-              <img src={require("./images/emma.JPG")} width="100px" height="100px"/>
+              <div className="bio">
+                <div>
+                  <img src={require("./images/megan.png")} width="150px" height="150px"/>
+                </div>
+                <h3>Megan Potthast</h3>
+                <h4>Vice President</h4>
+              </div>
+              <div className="bio">
+                <div>
+                  <img src={require("./images/jessie.png")} width="150px" height="150px"/>
+                </div>
+                <h3>Jessie Mass</h3>
+                <h4>Tresurer</h4>
+              </div>
+              <div className= "bio2">
+                <div className="bio two">
+                <div>
+                  <img src={require("./images/sara.png")} width="150px" height="150px"/>
+                </div>
+                  <h3>Sara Johnson</h3>
+                  <h4>Service</h4>
+                </div>
+                <div className="bio two">
+                <div>
+                  <img src={require("./images/emma.png")} width="150px" height="150px"/>
+                </div>
+                  <h3>Emma Woods</h3>
+                  <h4>Secretary</h4>
+                </div>
+              </div>
+            </div>
+            <div className="namelist">
               <h2>Active Members</h2>
               <p>Adrienne Lister Becca Campbell - Sisterhood Chair Claire Donze Kelly-Marie Christensen Megan Potthast - Fundraising
                   Chair Morgan Watkins Sara Johnson - Associate Member Chair Sarah Ferguson Steph Gladbach - Social Chair Sofia
                   Cozzoni Jessie Maass Kendall Butler - Public Relations Chair Amber Lawrence - Historian Katherine Feissle ​
               </p>
+            </div>
+            <div className="namelist">
               <h2>New Memers</h2>
               <p>Sarah Albertson Hannah Cannady Jenna Graff Lyn Pollard Amanda Frazier Lily Ma Kim Dyhouse ​Emily Workman</p>
+            </div>
+            <div className="namelist">
               <h2>Alumni</h2>
               <p>Dakota Juett Ashley “Ronduh” Nickolaisen Anne Parker Leticia Watson Cate Gladbach Cortnee Templeton Sam Avery Adrienne
                   Comage Hannah Gretlein Paige Fitzgibbons Jana Hochard ​Molly Moran Reagan Schneiders Jolene Harbin Stephanie
                   Dunham Alicia Pajda Ambria Powell Kellie L’Hote ​Cari Martin Catherine Standley Katie Mazanec Melissa Cassmeyer
               </p>
-          </div>
+            </div>
+    </div>
           <div className="FAQ vl">
+          <a className='anchor' id='faq-link'></a>
               <h1>FAQ's</h1>
               <div className="container FAQ-wrapper">
 
@@ -460,12 +497,56 @@ class App extends Component {
               </div>
           </div>
           <div className="Join vl">
+          <a className='anchor' id='join-link'></a>
               <h1>Join</h1>
+              <div className="join-p">
+                <p>If you are interested in rushing Omega Sigma or would like to find out more about us, please fill out the interest form.</p>
+              </div>
+                <div className="form-img">
+                <form>
+                  <div className="name-form">
+                  <div className="form-group">
+                    <label for="exampleInputName">Name</label>
+                    <input type="name" class="form-control" id="exampleInputName1" aris-describedby="nameHelp" placeholder="Enter first name" />
+                    <input type="name" class="form-control" id="exampleInputName2" aris-describedby="nameHelp" placeholder="Enter last name" />
+                  </div>
+                  </div>
+                  <div className="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div className="comment-box">
+                  <div className="form-group">
+                    <label for="exampleInputPassword1">Comments</label>
+                    <textarea type="comment" class="form-control" id="exampleInputComment1" placeholder="Enter comments" rows="5"/>
+                  </div>
+                  </div>
+                  <div className="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <img src={require("./images/Join.png")} width="20000px"/>
+              </div>
           </div>
+        
           <div className="Contact vl">
+          <a className='anchor' id='contact-link'></a>
               <h1>Contact Us</h1>
+              <div className="links">
+                <a href="">
+                  <img src= {require("./images/email.png")} width="80px" height="80px"/>
+                </a>
+                <a href="https://www.facebook.com/omegasigmamst" target="_blank">
+                  <img src= {require("./images/facebook.png")} width="70px" height="70px"/>
+                </a>
+                <a href="https://www.instagram.com/omegasigmamst" target="_blank">
+                  <img src= {require("./images/instagram.png")} width="70px" height="70px"/>
+                </a>
+              </div>
           </div>
-        </div>
+          </div>
       </div>
     );
   }
