@@ -26,7 +26,39 @@
       window.app.gapiPromise = gapiPromise;
     </script>
     <script>
-      $(document).ready(function(){
+      $(document).ready(function() {
+        $('.gform').submit(function(e) {
+          alert("Email sent! We will get back with you shortly.")
+          /*var name    = document.getElementById('name')
+          var lname   = document.getElementById('lname')
+          var email   = document.getElementById('email')
+          var message = document.getElementById('comment')
+
+          if (!name.value || !email.value || !message.value) {
+            console.log("sumtin wong")
+            console.log("Name: " + name.value)
+            console.log("Email: " + email.value);
+            console.log("Message: " + message.value)
+            return false;
+          } else {
+            console.log("good");
+            $.ajax({
+              method: 'POST',
+              url: 'https://formspree.io/dmgardiner25@gmail.com',
+              data: $('#contactform').serialize(),
+              datatype: 'json'
+            });
+            e.preventDefault();
+            $(this).get(0).reset();
+            console.log("Message sent");
+          }*/
+        });
+      });
+    </script>
+    <script data-cfasync="false" type="text/javascript"
+    src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
+    <script>
+      /*$(document).ready(function(){
         // Add smooth scrolling to all links
         $("a").on('click', function(event) {
       
@@ -45,11 +77,11 @@
             }, 800, function(){
          
               // Add hash (#) to URL when done scrolling (default click behavior)
-              window.location.hash = hash;
+              //window.location.hash = hash;
             });
           } // End if
         });
-      });
+      });*/
       </script>
     <script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
     <!--
@@ -61,7 +93,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Omega Sigma</title>
   </head>
   <body>
     <noscript>

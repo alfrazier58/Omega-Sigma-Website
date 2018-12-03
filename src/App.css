@@ -167,7 +167,7 @@
 
 .SAVE {
   margin-left: 100px;
-  border: 5px solid rgb(245, 229, 176);
+  border: 5px solid #F5E5B0;
   float: left;
   -webkit-box-shadow: 0px 0px 55px -5px rgba(115,115,115,0.69);
   -moz-box-shadow: 0px 0px 55px -5px rgba(115,115,115,0.69);
@@ -176,9 +176,25 @@
 }
 
 .philanthrophy {
+  width: 100%;
   height: auto;
   padding-bottom: 60px;
   margin-bottom: 60px;
+}
+
+.philanthrophy p {
+  float: left;
+  width: 60%;
+  margin-left: 20px !important;
+}
+
+.shelter {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.news {
+  height: 100%;
 }
 
 .upper-item img {
@@ -237,12 +253,12 @@
 }
 .Join {
   height: 100%;
-  margin-top: 50px;
-  padding-bottom: 600px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .Contact {
+  float: left;
   margin-bottom: 20px;
 }
 
@@ -275,9 +291,6 @@
   background: linear-gradient(rgb(117, 7, 20), #C42032) !important;
 }
 
-.form-img {
-  margin-bottom: 100px !important;
-}
 
 .form-img img {
   margin-top: 65px;
@@ -292,8 +305,8 @@
 
 .comment-box textarea {
   height: auto;
-  margin-left: 22.4px;
   overflow-wrap: break-word;
+  margin-left: 22.4px;
   border-radius: 0;
   border: solid 1px #575656 !important;
   width: 400px;
@@ -322,14 +335,6 @@ form {
   border-radius: 0 !important;
   width: 400px;
   margin: auto;
-}
-
-.form-group input[type=name] {
-  display: inline;
-  width: 190px;
-  margin: 10px;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 /* Main content */
 
@@ -395,6 +400,11 @@ a.anchor {
   visibility: hidden;
 }
 
+.about {
+  padding-bottom: 80px;
+  margin-bottom: 60px;
+}
+
 .aboutL {
   text-decoration: none;
   border: solid blue 1px;
@@ -405,6 +415,7 @@ a.anchor {
 .history {
   clear: both;
   overflow: hidden;
+  margin-top: -40px;
 }
 
 .members h1 {
@@ -422,17 +433,12 @@ a.anchor {
   width: 33%;
 }
 
-.bio .two {
-  width: 50%;
-  text-align: center !important;
-  position: relative;
-}
-
 .bio2 {
   width: 100%;
   position: relative;
-  margin-left: 140px;
+  margin-left: 17%;
 }
+
 .executives {
   width: 100%;
 }
@@ -471,13 +477,6 @@ a.anchor {
 .members img {
   text-align: left;
   margin-left: 100px;
-}
-
-.rotator {
-  margin-bottom: 50px;
-  padding-bottom: 100px !important;
-  border: solid purple 6px;
-  height: 600px;
 }
 
 .rotator p{
@@ -550,9 +549,8 @@ a.anchor {
 
 .flip-card-back h2 {
   font-size: 20px;
-  
-  text-align: center !important;
-  margin-left: -30px !important;
+  padding-left: 0 !important;
+  text-align: center;
   margin-top: 10px;
   margin-bottom: 5px;
 }
@@ -574,9 +572,11 @@ a.anchor {
 }
 
 .cards {
+  position: relative;
   width: 100%;
+  float: right;
   text-align: center;
-  padding-left: 10%;
+  padding-left: 50px;
 }
 
 

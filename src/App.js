@@ -1,10 +1,10 @@
 /* global gapi GoogleAuth */
 import React, { Component } from 'react';
 import './App.css';
-import './gallery.css';
 import './component.css';
 import './font-awesome/css/font-awesome.css';
 import './bootstrap/css/bootstrap.min.css';
+import './slideshow.css';
 import $ from 'jquery';
 import Login from './LoginConnector';
 
@@ -29,7 +29,11 @@ class App extends Component {
                       <img className="heart" src={require("./images/Donate_logo.png")} width="25px" />
                       <h2>Donate</h2>
                   </a>
-                  <Login onDidMount={this.initAuth2} />
+                  <a id='login-btn'>
+                    <img src={require("./images/Login_logo.png")} width="29px" />
+                    <h2>Member Login</h2>
+                  </a>
+                  {/*<Login onDidMount={this.initAuth2} />*/}
               </div>
           </div>
           <div className="lower-bar">
@@ -114,7 +118,7 @@ class App extends Component {
                   <h2>Our Philanthropy</h2>
                     <img className="SAVE" src={require("./images/SAVE.jpg")} width="200px" height="200px"/>
                     
-                      <p>The Rolla Animal Shelter</p>
+                      <p className='shelter'>The Rolla Animal Shelter</p>
                       <p>Omega Sigma holds a fundraiser every semester to raise money for our philanthropy, 
                         the Rolla Animal Shelter. We are helping not only with their day-to-day expenses, but 
                         the Rolla Animal Shelter is having their S.A.V.E. Campaign to raise money to build a new facility.</p>
@@ -151,74 +155,61 @@ class App extends Component {
                   the members formed Omega Sigma on the twenty-fifth day of October in 1990. They wished to establish an organization
                   that is dedicated to working together with old friends while establishing new friendships. Our Greek letters,
                   Omega and Sigma, represent and call to mind the former Order of the Sun.</p>
-              <h2>ΩΣ Founders</h2>
-              <p></p>
           </div>
 
           <div className="news vl">
             <a className='anchor' id='news-link'></a>
               <h1>News & Events</h1>
-              <article id="cc-slider">
-                <input checked="checked" name="cc-slider" id="slide1" type="radio" />
-                <input name="cc-slider" id="slide2" type="radio"/>
-                <input name="cc-slider" id="slide3" type="radio"/>
-                <input name="cc-slider" id="slide4" type="radio"/>
-                <input name="cc-slider" id="slide5" type="radio"/>
-                <div id="cc-slides">
-                  <div id="overflow">
-                    <div class="inner">
-                      <article>
-                        <div class="cctooltip">
-                          <h3>Amazing / Photoshop / Photography</h3>
-                          <h4>By <a href="#">codeconvey</a></h4>
-                        </div>
-                        <img src={require("./images/slide-1.jpg")}/>
-                      </article>
-                      <article>
-                      <div class="cctooltip">
-                        <h3>Abstract Retro Photography</h3>
-                        <h4>By <a href="#">codeconvey</a></h4>
-                      </div>
-                      <img src={require("./images/slide-2.jpg")}/> 
-                      </article>
-                    <article>
-                      <div class="cctooltip">
-                        <h3>Street Photography</h3>
-                        <h4>By <a href="#">codeconvey</a></h4>
-                      </div>
-                      <img src={require("./images/slide-3.jpg")}/> 
-                    </article>
-                    <article>
-                      <div class="cctooltip">
-                        <h3>Portrait / Woman / Photography</h3>
-                        <h4>By <a href="#">codeconvey</a></h4>
-                      </div>
-                      <img src={require("./images/slide-4.jpg")}/>
-                    </article>
-                    <article>
-                      <div class="cctooltip">
-                        <h3>Fashion / Sport / Photography</h3>
-                        <h4>By <a href="#">codeconvey</a></h4>
-                      </div>
-                      <img src={require("./images/slide-5.jpg")}/>
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <div id="controls">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-                <label for="slide4"></label>
-                <label for="slide5"></label>
-              </div>
-            </article>
+              <div class="container2">
+	
+	<div data-am-fadeshow="next-prev-navigation">
+
+		<input type="radio" name="css-fadeshow" id="slide-1" />
+		<input type="radio" name="css-fadeshow" id="slide-2" />
+		<input type="radio" name="css-fadeshow" id="slide-3" />
+
+		<div class="fs-slides">
+			<div class="fs-slide slide1">
+				<div className="slide-div">
+					<p>Our Fall 2018 initiated members!</p>
+				</div>
+			</div>
+			<div class="fs-slide slide2">
+        <div className="slide-div">
+          <p>Undefeated intramural badmitton champions; Jessie Mass, Sophia Cozzoni, and Amanda Frazier.</p>
+        </div>
+      </div>
+			<div class="fs-slide slide3"></div>
+		</div>
+
+		<div class="fs-quick-nav">
+			<label class="fs-quick-btn" for="slide-1"></label>
+			<label class="fs-quick-btn" for="slide-2"></label>
+			<label class="fs-quick-btn" for="slide-3"></label>
+		</div>
+		
+		<div class="fs-prev-nav">
+			<label class="fs-prev-btn" for="slide-1"></label>
+			<label class="fs-prev-btn" for="slide-2"></label>
+			<label class="fs-prev-btn" for="slide-3"></label>
+		</div>
+		
+		<div class="fs-next-nav">
+			<label class="fs-next-btn" for="slide-1"></label>
+			<label class="fs-next-btn" for="slide-2"></label>
+			<label class="fs-next-btn" for="slide-3"></label>
+		</div>
+
+	</div>
+	
+</div>
           </div>
 
 
           <div className="members vl">
             <a className='anchor' id='members-link'></a>
             <h1>Members</h1>
+            <h2>Excutive Members</h2>
             <div classname="executives">
               <div className="bio">
               <div>
@@ -260,20 +251,20 @@ class App extends Component {
             </div>
             <div className="namelist">
               <h2>Active Members</h2>
-              <p>Adrienne Lister Becca Campbell - Sisterhood Chair Claire Donze Kelly-Marie Christensen Megan Potthast - Fundraising
-                  Chair Morgan Watkins Sara Johnson - Associate Member Chair Sarah Ferguson Steph Gladbach - Social Chair Sofia
-                  Cozzoni Jessie Maass Kendall Butler - Public Relations Chair Amber Lawrence - Historian Katherine Feissle ​
+              <p>Amanda Frazier, Amber Lawrence, Becca Campbell, Emma Woods, Erin Nischwitz, Hannah Cannady, Jenna Graff
+                Jessie Maass, Katherine Feissle, Kayla Scherr, Kendall Butler, Laura Pirrone, Lily Ma, Lyn Pollard, Megan Potthast
+                Morgan Watkins, Sara Johnson, Sarah Albertson, and Sofia Cozzoni.
               </p>
             </div>
             <div className="namelist">
               <h2>New Memers</h2>
-              <p>Sarah Albertson Hannah Cannady Jenna Graff Lyn Pollard Amanda Frazier Lily Ma Kim Dyhouse ​Emily Workman</p>
+              <p>Gabriel Hulliung, Lydia Powers, Marisa Croniser, Morgan Freeman, Sabrina Cavander, and Sophia Rodriguez.</p>
             </div>
             <div className="namelist">
               <h2>Alumni</h2>
-              <p>Dakota Juett Ashley “Ronduh” Nickolaisen Anne Parker Leticia Watson Cate Gladbach Cortnee Templeton Sam Avery Adrienne
-                  Comage Hannah Gretlein Paige Fitzgibbons Jana Hochard ​Molly Moran Reagan Schneiders Jolene Harbin Stephanie
-                  Dunham Alicia Pajda Ambria Powell Kellie L’Hote ​Cari Martin Catherine Standley Katie Mazanec Melissa Cassmeyer
+              <p>Dakota Juett Ashley “Ronduh” Nickolaisen, Anne Parker, Leticia Watson, Cate Gladbach, Cortnee Templeton, Sam Avery, Adrienne
+                  Comage, Hannah Gretlein, Paige Fitzgibbons, Jana Hochard, ​Molly Moran, Reagan Schneiders, Jolene Harbin, Stephanie
+                  Dunham, Alicia Pajda, Ambria Powell, Kellie L’Hote, ​Cari Martin, Catherine Standley, Katie Mazanec, and Melissa Cassmeyer.
               </p>
             </div>
     </div>
@@ -503,23 +494,22 @@ class App extends Component {
                 <p>If you are interested in rushing Omega Sigma or would like to find out more about us, please fill out the interest form.</p>
               </div>
                 <div className="form-img">
-                <form>
+                <form className="gform" data-email="dmgardiner25@gmail.com" action="https://script.google.com/macros/s/AKfycbzWr0iodYN1wP_ppBPGjED8JYmsY9JG7w6oUFRaUss1Vt-HpeA/exec" method="POST">
                   <div className="name-form">
                   <div className="form-group">
                     <label for="exampleInputName">Name</label>
-                    <input type="name" class="form-control" id="exampleInputName1" aris-describedby="nameHelp" placeholder="Enter first name" />
-                    <input type="name" class="form-control" id="exampleInputName2" aris-describedby="nameHelp" placeholder="Enter last name" />
+                    <input name="name" type="text" class="form-control" id="name" aris-describedby="nameHelp" placeholder="Enter name" />
                   </div>
                   </div>
                   <div className="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                    <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" />
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                   </div>
                   <div className="comment-box">
                   <div className="form-group">
                     <label for="exampleInputPassword1">Comments</label>
-                    <textarea type="comment" class="form-control" id="exampleInputComment1" placeholder="Enter comments" rows="5"/>
+                    <textarea name="comment" type="comment" class="form-control" id="comment" placeholder="Enter comments" rows="5"/>
                   </div>
                   </div>
                   <div className="form-check">
@@ -535,7 +525,7 @@ class App extends Component {
           <a className='anchor' id='contact-link'></a>
               <h1>Contact Us</h1>
               <div className="links">
-                <a href="">
+                <a href="mailto:omega.sigma.1990@gmail.com">
                   <img src= {require("./images/email.png")} width="80px" height="80px"/>
                 </a>
                 <a href="https://www.facebook.com/omegasigmamst" target="_blank">
